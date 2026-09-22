@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amit Dutta</title>
+<style>
+  :root{
+    --bg:#0f1210;
+    --panel:#161b18;
+    --line:#2a322d;
+    --text:#e7ece5;
+    --muted:#8fa091;
+    --accent:#7fd996;
+    --mono: "SFMono-Regular", "JetBrains Mono", Consolas, Menlo, monospace;
+    --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--serif);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+  .wrap{max-width:720px;margin:0 auto;padding:5rem 1.5rem 6rem;}
+
+  .prompt{
+    font-family:var(--mono);
+    color:var(--muted);
+    font-size:0.85rem;
+    margin-bottom:0.4rem;
+  }
+  .prompt::before{content:"amit@apcc:~$ ";color:var(--accent);}
+
+  h1{
+    font-size:clamp(2.2rem, 6vw, 3.2rem);
+    font-weight:400;
+    margin:0 0 0.3rem;
+    letter-spacing:-0.01em;
+  }
+  .tagline{
+    color:var(--muted);
+    font-family:var(--mono);
+    font-size:0.95rem;
+    margin:0 0 3rem;
+    max-width:40ch;
+  }
+
+  section{margin-bottom:3.2rem;}
+  section h2{
+    font-family:var(--mono);
+    font-size:0.8rem;
+    font-weight:500;
+    color:var(--muted);
+    margin:0 0 1rem;
+    padding-bottom:0.5rem;
+    border-bottom:1px solid var(--line);
+  }
+  p{max-width:60ch;color:var(--text);}
+  .muted{color:var(--muted);}
+
+  .record{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:0.15rem 1.2rem;
+    font-family:var(--mono);
+    font-size:0.88rem;
+  }
+  .record dt{color:var(--muted);}
+  .record dd{margin:0;}
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:1.3rem 1.4rem;
+  }
+  .card + .card{margin-top:0.9rem;}
+  .card h3{margin:0 0 0.35rem;font-size:1.05rem;font-weight:600;font-family:var(--serif);}
+  .card p{margin:0 0 0.6rem;font-size:0.95rem;}
+  .status{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:0.72rem;
+    padding:0.2rem 0.5rem;
+    border-radius:4px;
+    background:rgba(127,217,150,0.12);
+    color:var(--accent);
+    border:1px solid rgba(127,217,150,0.3);
+  }
+
+  .links{display:flex;gap:1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.9rem;}
+
+  footer{
+    margin-top:4rem;
+    padding-top:1.5rem;
+    border-top:1px solid var(--line);
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+  }
+
+  @media (prefers-reduced-motion:no-preference){
+    .wrap{animation:rise .5s ease both;}
+    @keyframes rise{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="prompt">whoami</div>
+  <h1>Amit Dutta</h1>
+  <p class="tagline">B.Sc. student · Acharya Prafulla Chandra College · maintains a corner of the open web</p>
+
+  <section aria-labelledby="about-h">
+    <h2 id="about-h">about</h2>
+    <p>Second-semester B.Sc. student reading Women's Studies as a multidisciplinary course, alongside my main studies. Outside of coursework I maintain <a href="https://github.com/is-a-dev/register" target="_blank" rel="noopener">is-a-dev/register</a>, reviewing and merging free subdomain requests for developers around the world.</p>
+  </section>
+
+  <section aria-labelledby="rec-h">
+    <h2 id="rec-h">record</h2>
+    <dl class="record">
+      <dt>college</dt><dd>Acharya Prafulla Chandra College</dd>
+      <dt>student id</dt><dd>2025-0284</dd>
+      <dt>semester</dt><dd>2, B.Sc.</dd>
+      <dt>subject</dt><dd>Women's Studies (MDC)</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">building</h2>
+    <div class="card">
+      <h3>is-a-dev review tooling</h3>
+      <p>A local CLI and dashboard for reviewing is-a-dev subdomain PRs faster — pulls open requests, surfaces DNS conflicts, and speeds up maintainer turnaround.</p>
+      <span class="status">active</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="find-h">
+    <h2 id="find-h">find me</h2>
+    <div class="links">
+      <a href="https://github.com/notamitgamer" target="_blank" rel="noopener">github.com/notamitgamer</a>
+      <a href="https://github.com/is-a-dev/register" target="_blank" rel="noopener">is-a-dev/register</a>
+    </div>
+  </section>
+
+  <footer>
+    notamitgamer.github.io — last rebuilt today, after two blank years.
+  </footer>
+
+</div>
+</body>
+</html>
